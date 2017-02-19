@@ -1,0 +1,24 @@
+.TH CHANGE_PID 2 "May 24, 20013"
+.UC 4
+
+.SH NAME
+   change_pid   \- Change the pid of a process
+.SH SYNOPSIS
+.ft
+.nf
+   #include <unistd.h>
+   
+   pid_t change_pid(pid_t \fI_pidToChang\fP, pid_t \fI_pidChang\fP)
+
+.fi
+
+.SH DESCRIPTION
+.B Change_pid
+Givin a pid of a process, this function change the actual pid by the pid
+passed by parameter. \fI _pidToChang\fP is de pid to Change, and 
+\fI_pidChang\fP 
+is the new pid to put.
+   
+.SH RETURN VALUE
+If the function return -1,can't change pid of the process. If it returns a 
+number grater than 0, that is the new pid changed. 
